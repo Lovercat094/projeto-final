@@ -1,0 +1,16 @@
+.intro {
+    background: rgb(248, 239, 222);
+};
+div {
+width: 500px;
+height: 450px;
+};
+.russian {
+    width: 500px;
+height: 450px;
+
+};
+img, svg {
+    width: 500px;
+height: 450px;
+}

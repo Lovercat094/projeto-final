@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>cadastro animal</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./css/main.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand">Gato mia</a>
+            <form class="d-flex" role="raça ou cor">
+                <input class="form-control me-2" type="search" placeholder="search" aria-label="search">
+                <button class="btn btn-outline-seccess" type="submit">pesquisar</button>
+            </form>
+        </div>
+    </nav>
+
+    <section class="intro">
+        <h2>Gato mia</h2>
+        <h4>um site dedicado exclusivamente a gatos</h4>
+        <p>aqui você encontra:</p>
+        <a href="">8 raças mais populares</a>
+        <a href="">conversor de indade felina em idade humana</a>
+        <img src="https://i.pinimg.com/originals/0e/c1/f8/0ec1f8ebfb5dda3f483a6fd971576887.png" alt="">
+        <h5></h5>
+    </section>
+
+    <div id="raças">
+
+        <div class="russian">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREq1Fbzirar_MbqXKoiskgtorTHX3xMa-29A&usqp=CAU"
+                alt="azul russo">
+
+                <p>O nome da raça provem do tom prateado de seus pelos, que possui uma aspecto azulado. os gatos dessa espécies são conhecidos por serem elegantes e pacificos
+                </p>
+
+                <button type="submit">grafico da raça</button>
+                <div>
+                    <canvas id="russian_blue"></canvas>
+                </div>
+
+
+                energia 6
+                afetividade 7
+                inteligencia 8
+                lealdade 9
+        </div>
+
+        <div class="maine_coon">
+            <img src="https://blog.agrosolo.com.br/wp-content/uploads/2017/08/maine-coon2.png" alt="maine coon">
+
+            <p>uma das raças mais populares. Sua fama se deve ao seu tamaho avantajado e pelagem longa, podendo chegar até um metro de comprimento e pesar ate oito quilos. São conhecidos também por sua personalidade docil</p>
+
+            energia 5
+            afetividade 8
+            inteligencia 10
+            lealdade 9
+        </div>
+
+        <div class="bengal">
+            <img src="https://premierpet.com.br/wp-content/uploads/2021/07/bengal-grande.jpg" alt="bengal">
+<p>A aparencia unica do bengal ou gato-de-bengala se deve a sua genetica. A raca foi originada atravez de crusamentos entre gatos selvagens e domesticos</p>
+            
+            energia 3
+            afetividade 7
+            inteligencia 7
+            lealdade 7
+        </div>
+
+        <div class="angora">
+            <img src="https://cats-ptmagazine.com/wp-content/uploads/2019/03/Angora_Turco.jpg" alt="angora">
+<p>Gatos elegantes e ativos. o adjetivo que melhor os descreve é "encantadores"</p>
+            
+            energia 10
+            afetividade 8
+            inteligencia 10
+            lealdade 7
+        </div>
+
+        <div class="persa">
+            <img src="https://doglife.sydle.one/api/1/blog/_classId/5d66ed07e7c98a556a499a36/_download/61e18969edf3b92597aacd26/61e188b0edf3b92597a73735?accessToken=eyJhbGciOiJIUzUxMiJ9.eyJjb2RlIjoiNWU5NzY2Y2M0MThhMmI3MTc1NGQ4M2U5IiwibG9naW4iOiJibG9nLmRvZ2xpZmUiLCJuYW1lIjoiQmxvZyBEb2dMaWZlIiwiX29yZ0lkIjoiNWQ2YmJhM2IzZTM4ZTg3NjgzNGY5Y2NmIiwiX2NsYXNzIjp7ImNsYXNzUGFja2FnZUlkZW50aWZpZXIiOiJfc3lzdGVtIiwiX2lkIjoiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyIiwiX2NsYXNzSWQiOiIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJjbGFzc0lkZW50aWZpZXIiOiJfY2xhc3MifSwiX2NyZWF0aW9uRGF0ZSI6IjIwMjAtMDUtMjBUMjA6NDg6MzIuNzMxWiIsIl9sYXN0VXBkYXRlRGF0ZSI6IjIwMjAtMTEtMDZUMTQ6MDQ6MTguMTAxWiIsIl9sYXN0VXBkYXRlVXNlciI6eyJjbGFzc1BhY2thZ2VJZGVudGlmaWVyIjoiX3N5c3RlbSIsIl9pZCI6IjVlYzU2ZTVkMTkwZGFkMTQ2NmMwNzZhZSIsIl9jbGFzc0lkIjoiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAyIiwiY2xhc3NJZGVudGlmaWVyIjoiX3VzZXIifSwiX2NsYXNzUmV2aXNpb24iOiJlY2YyYmFmNWM5YjQ5NWM5ZDZkYjE0ZmFjZWRjMjAxMCIsIl9yZXZpc2lvbiI6IjVmYTU1N2UyMDAxMmYyMGU1ZGIyZTQ3YyIsImFjdGl2ZSI6dHJ1ZSwib3JnYW5pemF0aW9uSWQiOiJkb2dsaWZlIiwiYXV0aGVudGljYXRpb25DbGFzcyI6Il9zeXN0ZW0uX3VzZXIiLCJ0b2tlblZlcnNpb24iOjE2LCJpc0FwcER5bmFtaWNBdXRoVG9rZW4iOmZhbHNlLCJpYXQiOjE2MTU4MTUzMDIsImlzcyI6Imp3Iiwic3ViIjoiYWNjZXNzVG9rZW4ifQ.94GMea_byYtt2quY3O9rCcK8bjymzaLjT2VQzWQkP-5nYtbp_34tcSEXN1xt1SG1ZnXgeo0RDL-iROTcIoH2wg"
+                alt="persa">
+<p>A raça de gato mais conhecida e tradicional. são gatos majestosos e pacificos, de natureza calma e independente</p>
+                
+                energia 3
+                afetividade 7
+                inteligencia 6
+                lealdade 7
+        </div>
+
+        <div class="bombay">
+            <img src="https://t4.ftcdn.net/jpg/06/61/30/17/360_F_661301778_srDVIFyWLARTSBKEvcDU44OQ7927alQU.jpg" alt="bombay">
+<p>Sua aparencia lembra propositalmente a de uma pantera negra em tamanho reduzido. São extremamente carinhosos e doceis</p>
+            
+            energia 7
+            afetividade 10
+            inteligencia 6
+            lealdade 8
+        </div>
+
+        <div class="Munchkin"></div>
+        <p>A principal característica da raça são suas patas curtas e tamanho reduzido, que dão a eles um aspecto adoravel</p>
+        energia 7
+            afetividade 10
+            inteligencia 8
+            lealdade 9
+
+        <div class="savannah"></div>
+        <p>Uma raça que se encontra no limiar entre selvageme domestico. Tambem sao uma raca de gatos hibridos, onde as caracteristicas de seus ancestrais selvagens se fazem muito presentes em sua aparencia</p>
+        energia 10
+            afetividade 6
+            inteligencia 18
+            lealdade 7
+
+    </div>
+
+    <!-- pagina onde sera possível cadastrar e visualizar um banco de dado de animais, cada um com suas partiucularidades
+
+    elementos:
+    html:
+    navbar, com uma barra de pesquisa que aceitará nome de animais ou categorias como cores, especie, raça
+
+    div de apresentação, explicando a proposta do site
+
+    parte do cadastro, onde será possível inserir os dados do aninimais e escolher um sprite baseado na aparencia do animal
+
+    catálogo onde os animais serão exibidos
+
+    js e data base:
+    um array onde serão armazenados os logins
+
+    criar a função para criar os animais
+    
+    configurar os botões do cadastro
+
+    criar a função para lidar com os erros
+
+    fazer aquela parada de você clicar num link na página e abrir os dados do animal
+
+    css:
+
+    estilizar a página e as divs dos animais  -->
+
+
+
+
+    <script src='./js/main.js'></script>
+</body>
+
+</html>

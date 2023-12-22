@@ -25,6 +25,8 @@
         </div>
     </nav>
 
+<div id="data-container"></div>    
+
     <section class="intro">
         <h2>Gato mia</h2>
         <h4>um site dedicado exclusivamente a gatos</h4>
@@ -33,6 +35,86 @@
         <a href="">conversor de indade felina em idade humana</a>
         <img src="https://i.pinimg.com/originals/0e/c1/f8/0ec1f8ebfb5dda3f483a6fd971576887.png" alt="">
         <h5></h5>
+    </section>
+    <p>digite a baixo a idade do seu gato para saber a idade humana equivalente</p>
+    <p>para gatos com menos de um ano, insira os meses no seguinte formato: 0,X.</p>
+    <form>
+        <label for="gato">Idade do felino</label>
+        <input type="number" id="gato">
+
+        <button type="button" onclick="calcularIdade()">Calcular</button>
+    </form>
+
+    <div class="resultado" id="resultado"></div>
+    <table>
+        <thead>
+            <tr>
+                <th>idade felina</th>
+                <th>idade humana</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td> = 0,1</td>
+                <td>6 meses</td>
+            </tr>
+            <tr>
+                <td> = 0,2</td>
+                <td>3 anos</td>
+            </tr>
+            <tr>
+                <td> = 0,3</td>
+                <td>5 anos</td>
+            </tr>
+            <tr>
+                <td> = 0,4</td>
+                <td>7 anos</td>
+            </tr>
+            <tr>
+                <td> = 0,5</td>
+                <td>9 anos</td>
+            </tr>
+            <tr>
+                <td> = 0,6</td>
+                <td>10 anos</td>
+            </tr>
+            <tr>
+                <td> = 0,7</td>
+                <td>12 anos</td>
+            </tr>
+            <tr>
+                <td> = 0,8</td>
+                <td>11 anos</td>
+            </tr>
+            <tr>
+                <td> = 0,9</td>
+                <td>13 anos</td>
+            </tr>
+            <tr>
+                <td> = 0,10</td>
+                <td>14 anos</td>
+            </tr>
+            <tr>
+                <td> = 0,11</td>
+                <td>15 anos</td>
+            </tr><tr>
+                <td> = 1</td>
+                <td>16 anos</td>
+            </tr>
+            <tr>
+                <td> = 2</td>
+                <td>24 anos</td>
+            </tr>
+
+
+
+        </tbody>
+    </table>
+
+
+    
+    <section id="conversor_idade">
+
     </section>
 
     <div id="raças">
@@ -45,9 +127,38 @@
                 </p>
 
                 <button type="submit">grafico da raça</button>
+               
                 <div>
-                    <canvas id="russian_blue"></canvas>
-                </div>
+                    <canvas id="myChart"></canvas>
+                  </div>
+                  
+                  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                  
+                  <script>
+                    const ctx = document.getElementById('myChart');
+                  
+                    new Chart(ctx, {
+                      type: 'radar',
+                      data: {
+                        labels: ['Energia', 'Afetividade', 'Inteligencia', 'Lealdade'],
+                        datasets: [{
+                          label: '# of Votes',
+                          data: [6, 7, 8, 9],
+                          borderWidth: 1,
+                          backgroundColor: 'rgba(225, 220, 117, 1)',
+                          borderColor: 'rgbs(225, 179, 85, 1)'
+                        }]
+                      },
+                      options: {
+                        scales: {
+                          y: {
+                            beginAtZero: true
+                          }
+                        }
+                      }
+                    });
+                  </script>
+                  
 
 
                 energia 6
@@ -154,7 +265,7 @@
 
 
 
-    <script src='./js/main.js'></script>
+    <script type="module" src='./js/main.js'></script>
 </body>
 
 </html>
